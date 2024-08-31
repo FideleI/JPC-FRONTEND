@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/css/style1.css')}}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="{{url_for('static', filename='assets/img/rccgjp_logo.jpg')}}">
+                    <h2 class="text-muted">Jesus <span class="danger">Pavilion</span></h2>
+                </div>
+
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined"> close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" >
+                    <span class="material-symbols-outlined">dashboard</span>
+                        <h3>Dashboard</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">person</span>
+                        <h3>Members</h3>
+                </a>
+                <a href="#"><span class="material-symbols-outlined">work</span>
+                        <h3>Work Force</h3>
+                </a>
+                <a href="#"><span class="material-symbols-outlined"> groups</span>
+                        <h3>Visitors</h3>
+                </a>
+                <a href="#"><span class="material-symbols-outlined">show_chart</span>
+                        <h3>Analytics</h3>
+                </a>
+                <a href="#"><span class="material-symbols-outlined">notifications</span>
+                    <h3>Notifications</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="#"><span class="material-symbols-outlined">settings</span>
+                        <h3>Settings</h3>
+                </a>
+                <a href="{{url_for('index_bp.index')}}"><span class="material-symbols-outlined">logout</span>
+                        <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>       
+        <!-- END OF ASIDE -->
+         <main>
+                <h1>Dashboard</h1>
+                <div class="date">
+                    <input type="date">
+                </div>
+                <!-- TOTAL MEMBERS CHART STARTS -->
+                <div class="insights">
+                    <div class="members">
+                        <span class="material-symbols-outlined">analytics</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Total Members</h3>
+                                <h1>100</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>81%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 7 days</small>
+                        <!-- TOTAL MEMBERS CHART ENDS -->
+                    </div>
+
+                    <!-- VISITORS CHART STARTS -->
+                <div class="visitors">
+                    <span class="material-symbols-outlined">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Visitors</h3>
+                            <h1>12</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>42%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 7 days</small>
+                </div>
+                <!-- VISITORS CHART ENDS -->
+
+                 <!-- WORK FORCE CHART STARTS -->
+                 <div class="workforce">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Work Force</h3>
+                            <h1>45</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>60%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 7 days</small>
+                </div>
+                <!-- WORK FORCE CHART ENDS -->
+                </div>
+
+                <div class="recent-onboard">
+                    <h2>Onboarding History</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>MemberID</th>
+                                <th>Member Name</th>
+                                <th>Dob</th>
+                                <th>Phone Number</th>
+                                <th>Date Joined</th>
+                                <th>Time Joined</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="success">Active</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="success">Active</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="success">Active</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                 </div>
+         </main>
+        <!-- END OF MAIN -->
+        <!-- TOP RIGHT START -->
+          <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Daniel</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="{{ url_for('static', filename='assets/img/images.jpeg') }}" alt="profile2">
+                    </div>
+                </div>
+            </div>
+        <!-- END OF TOP RIGHT -->
+        <div class="recent-updates">
+            <h2>Notifications</h2>
+            <div class="updates">
+                <div class="update">
+                    <div class="profile-photo">
+                        <img src="{{ url_for('static', filename='assets/img/images.jpeg') }}" alt="profile2">
+                    </div>
+                    <div class="message">
+                        <p><b>Mike Ofe</b> Signed for workforce usherstraining</p>
+                        <small class="text-muted">2 Minutes ago</small>
+                    </div>
+                </div>
+
+                <div class="update">
+                    <div class="profile-photo">
+                        <img src="{{ url_for('static', filename='assets/img/images.jpeg') }}" alt="profile2">
+                    </div>
+                    <div class="message">
+                        <p><b>Mike Ofe</b> Signed for workforce usherstraining</p>
+                        <small class="text-muted">2 Minutes ago</small>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="profile-photo">
+                        <img src="#" alt="profile2">
+                    </div>
+                    <div class="message">
+                        <p><b>Mike Ofe</b> Signed for workforce usherstraining</p>
+                        <small class="text-muted">2 Minutes ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF RECENT UPDATES -->
+        <div class="quick-action">
+            <h2>Quick Action</h2>
+            <div class="item online">
+                <div class="icon">
+                 <span class="material-symbols-outlined">person</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                       <a href="{{url_for('member_bp.member_section')}}">ADD MEMBER</a> 
+                        <small class="text-muted"><br> lorem lorem</small>
+                    </div>
+                    <h5 class="success">+39%</h5>
+                    <h3>100</h3>
+                </div>
+            </div>
+            <div class="item offline">
+                <div class="icon">
+                    <span class="material-symbols-outlined">edit_off</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <a href="#">EDIT MEMBER DETAIL</a>
+                        <small class="text-muted"><br> lorem lorem</small>
+                    </div>
+                    <h5 class="success">+39%</h5>
+                    <h3>100</h3>
+                </div>
+            </div>
+            <div class="item line">
+                <div class="icon">
+                    <span class="material-symbols-outlined">send</span>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <a href="#">CREATE MESSAGE TEMPLATES</a>
+                        <small class="text-muted"><br> lorem lorem</small>
+                    </div>
+                    <h5 class="success">+39%</h5>
+                    <h3>100</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="{{url_for('static', filename='assets/js/script.js')}}"></script>
+</body>
+</html>
