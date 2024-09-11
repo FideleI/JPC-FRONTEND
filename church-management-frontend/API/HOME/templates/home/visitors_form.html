@@ -1,0 +1,90 @@
+{% extends "form_layout.html" %}
+{% block title %}
+Member Registration Form
+{% endblock %}
+{% block content %}
+{%block header%} VISITORS REGISTRATION FORM {% endblock %}
+        <div class="mb-3">
+            <small><span class="asteric">*</span> Required </small>
+        </div>
+        <div class="header-two mb-3">
+            <h2>PERSONAL INFORMATION</h2>
+        </div>
+        <form action="#" method="POST">
+        
+            <!-- first Name -->
+            <div class="form-group">
+                <label for="first name">First Name <span class="asteric">*</span></label>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter your answer" required>
+            </div>
+            <!-- last Name -->
+            <div class="form-group">
+                <label for="last name">Last Name <span class="asteric">*</span></label>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter your answer" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth <span class="asteric">*</span></label>
+                <input type="text" id="date" name="dob" placeholder="Please input date (dd/mm/yyyy)" required>
+            </div>
+
+            
+            <!-- Phone No -->
+            <div class="form-group">
+                <label for="phone">Phone No <span class="asteric">*</span></label>
+                <input type="text" id="phone" name="phone" placeholder="Number must be 11" pattern="[0-9]{11}" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email <span class="asteric">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Please enter an email" required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address-line1">Address <span class="asteric">*</span></label>
+                <input type="text" id="address-line1" name="address-line1" placeholder="Street Address Line 1" required>
+
+            </div>
+        
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City <span class="asteric">*</span></label>
+                <input type="text" id="city" name="city" placeholder="Enter your answer" required>
+            </div>
+        
+            <!-- Post Code -->
+            <div class="form-group">
+                <label for="postcode">Post Code <span class="asteric">*</span></label>
+                <input type="text" id="postcode" name="postcode" placeholder="Please enter at most 7 characters" maxlength="7" required>
+            </div>
+
+            <!-- prayer point -->
+            <div class="form-group">
+                <label for="prayerp">Prayer Points </label>
+                <input type="text" id="prayer" name="prayer" placeholder="Enter Your Answer" >
+            </div>
+            
+             <!-- any children? -->
+             <div class="form-group">
+                <label>Do You Have Any Children? <span class="asteric">*</span></label>
+                <label><input type="radio" name="any-children" value="yes" required> Yes</label>
+                <label><input type="radio" name="any-children" value="no" required> No</label>
+            </div>
+
+            <!-- year attended -->
+            <div class="form-group">
+                <label for="year-attended">If Yes, State Name and Dob</label>
+                <input type="text" id="year-attended" name="year-attended" placeholder=" Please enter name of child & dob">
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+   {% endblock %}

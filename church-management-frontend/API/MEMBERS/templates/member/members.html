@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block title %}
+Members
+{% endblock %}
+{% block content %}
+         <main>
+            <h1>Member Onboarding</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <a href="{{ url_for('members_bp.admin_view') }}" class="card-link">
+                <div class="card-container">
+                  <div class="card-content">
+                    <div class="card-header">
+                      <div class="card-title-section">
+                        <h2 class="card-title">Access Member information</h2>
+                      </div>
+                    </div>
+                    <small class="card-text-muted">Click here to access information of your members</small>
+                  </div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('members_bp.admin_add') }}" class="card-link">
+                <div class="card-container">
+                  <div class="card-content">
+                    <div class="card-header">
+                      <div class="card-title-section">
+                        <h2 class="card-title">Add New Member</h2>
+                      </div>
+                    </div>
+                    <small class="card-text-muted">Click to manually add a new member</small>
+                  </div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('members_bp.admin_add') }}" class="card-link">
+                <div class="card-container">
+                  <div class="card-content">
+                    <div class="card-header">
+                      <div class="card-title-section">
+                        <h2 class="card-title">Update Member information</h2>
+                      </div>
+                    </div>
+                    <small class="card-text-muted">Update Exiting members information</small>
+                  </div>
+                </div>
+            </a>
+
+
+                   
+              
+
+         </main>
+        <!-- END OF MAIN -->
+
+{% endblock %}

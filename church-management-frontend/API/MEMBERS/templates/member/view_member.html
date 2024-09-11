@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block title %}
+Members
+{% endblock %}
+{% block content %}
+         <main>
+            <h1>Member Onboarding</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            
+            <div class="recent-onboard">
+                <h2>Members Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>MemberID</th>
+                            <th>first Name</th>
+                            <th>last Name</th>
+                            <th>Dob</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Postcode</th>
+                            <th>City</th>
+                            <th>Occupation</th>
+                            <th>Date Joined</th>
+                            <th>Communication</th>
+                            <th>Status</th>
+                            <th>Parish Name</th>
+                            <th>Year Attended</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>31013376</td>
+                            <td>Fidele </td>
+                            <td>Iboh</td>
+                            <td>Dob</td>
+                            <td>01/01/01</td>
+                            <td>07546585856</td>
+                            <td>lespatar@gmail.com</td>
+                            <td>99 luscinia view napier road</td>
+                            <td>builder</td>
+                            <td>reading</td>
+                            <td>12/08/24</td>
+                            <td>email</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td class="warning">Pending</td>
+                        </tr>
+                        <!-- Loop through the members and display the data in table rows -->
+                        <!-- {% for member in members %}
+                        <tr>
+                            <td>{{ member.id }}</td>
+                            <td>{{ member.full_name }}</td>
+                            <td>{{ member.dob }}</td>
+                            <td>{{ member.phone }}</td>
+                            <td>{{ member.date_joined }}</td>
+                            <td>{{ member.time_joined }}</td>
+                            <td>{{ member.status }}</td>
+                        </tr>
+                        {% endfor %} -->
+                    </tbody>
+                </table>
+             </div>
+         </main>
+        <!-- END OF MAIN -->
+
+{% endblock %}

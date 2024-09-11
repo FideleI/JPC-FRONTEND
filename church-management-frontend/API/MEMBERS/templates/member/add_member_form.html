@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block title %}
+Add Member
+{% endblock %}
+{% block content %}
+<div class="form-main-wrapper">
+    <div class="form-wrapper">
+      <img src="{{url_for('static', filename='assets/img/signimg.png')}}">
+      <form action="add_member" method="POST">
+        <h1>MEMBER REGISTRATION FORM</h1>
+        <!-- Name -->
+        <div class="form-group">
+          <label for="firstname" class="form-label">First Name</label>
+          <input type="text" name="firstname" id="firstname" placeholder="First name" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label for="lastname" class="form-label">Last Name</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Last name" class="form-input" />
+        </div>
+  
+        <!-- Date of Birth -->
+        <div class="form-group">
+          <label for="dob" class="form-label">Date of Birth</label>
+          <input type="date" name="dob" id="dob" class="form-input" />
+        </div>
+  
+        <!-- Phone No -->
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone No</label>
+          <input type="text" class="form-input" id="phone" name="phone" placeholder="Number must be 11" required>
+        </div>
+  
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+  
+        <!-- Address -->
+        <div class="form-group">
+          <label for="address-line1" class="form-label">Address</label>
+          <input type="text" class="form-input" id="address-line1" name="address-line1" placeholder="Street Address Line " required>
+        </div>
+  
+        <!-- Postcode and City -->
+        <div class="form-group input-flex">
+          <div>
+            <label for="post" class="form-label">Post code</label>
+            <input type="text" name="post" id="post" placeholder="ex: NW1 4NP" class="form-input" />
+          </div>
+          <div>
+            <label for="city" class="form-label">City</label>
+            <input type="text" name="city" id="city" placeholder="ex: London" class="form-input" />
+          </div>
+        </div>
+  
+        <!-- Occupation -->
+        <div class="form-group">
+          <label for="occupation" class="form-label">Occupation</label>
+          <input type="text" class="form-input" id="occupation" name="occupation" placeholder="Enter Your Occupation">
+        </div>
+  
+        <!-- Date Joined Church -->
+        <div class="form-group">
+          <label for="date" class="form-label">Date Joined Church</label>
+          <input type="text" class="form-input" id="date" name="date_joined" placeholder="Please input date (dd/mm/yyyy)" required>
+        </div>
+  
+        <!-- Communication Preferences -->
+        <div class="form-group">
+          <label for="preferences" class="form-label">Communication Preferences</label>
+          <select class="form-input" name="preferences" id="preferences">
+            <option value="emailp">Email</option>
+            <option value="phonep">Phone</option>
+            <option value="smsp">SMS</option>
+          </select>
+        </div>
+  
+        <!-- Membership Status -->
+        <div class="form-group">
+          <label for="membership_status" class="form-label">Membership Status</label>
+          <select class="form-input" name="membership_status" id="membership_status">
+            <option value="newm">New Member</option>
+            <option value="existinm">Existing Member</option>
+            <option value="transferm">Transfer Member</option>
+          </select>
+        </div>
+  
+        <!-- Parish Name (Conditional) -->
+        <div class="form-group">
+          <label for="parish-name" class="form-label">If Transfer Member, Enter The Name Of Parish and Year of Attendance</label>
+          <input type="text" class="form-input" id="parish-name" name="parish-name">
+        </div>
+  
+        <!-- Submit Button -->
+        <button class="form-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,212 @@
+:root{
+      --blue: #5E50F9;
+    --indigo: #6610f2;
+    --purple: #6a008a;
+    --pink: #E91E63;
+    --red: #f96868;
+    --orange: #f2a654;
+    --yellow: #f6e84e;
+    --green: #46c35f;
+    --teal: #58d8a3;
+    --cyan: #57c7d4;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --gray-dark: #0f1531;
+    --blue: #5E50F9;
+    --indigo: #6610f2;
+    --purple: #6a008a;
+    --pink: #E91E63;
+    --red: #f96868;
+    --orange: #f2a654;
+    --yellow: #f6e84e;
+    --green: #46c35f;
+    --teal: #58d8a3;
+    --cyan: #57c7d4;
+    --white: #ffffff;
+    --gray: #434a54;
+    --gray-light: #aab2bd;
+    --gray-lighter: #e8eff4;
+    --gray-lightest: #e6e9ed;
+    --black: #000000;
+    --primary: #4B49AC;
+    --secondary: #a3a4a5;
+    --success: #57B657;
+    --info: #248AFD;
+    --warning: #FFC100;
+    --danger: #FF4747;
+    --light: #f8f9fa;
+    --dark: #282f3a;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: linear-gradient(120deg, #cb6ce6, #053e8a);
+    background-position: cover;
+    color: white;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#grad1 h1{
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#grad1 .btn{
+    max-width: 200px;
+    
+}
+header{
+    height: 75px;
+    background: white;
+    color: black;
+}
+header .jlogo-text{
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+.jesus-pavilion-link{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.jesus-pavilion-link svg {
+    margin-right: 8px; 
+}
+
+
+/* Login Page */
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+.center h1{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid var(--gray-lighter);
+    color: var(--black);
+
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field{
+    position: relative;
+    border-bottom: 1px solid var(--gray-lighter);
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--gray-light);
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: 5px;
+    color: var(--primary);
+
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: var(--gray-light);
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width: 100%;
+    font-weight: 700;
+    background: var(--indigo);
+}
+input[type="submit"]:hover{
+    background: var(--primary);
+    transition: .5s;
+}
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: var(--gray);
+}
+.signup_link a{
+    color: var(--info);
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}

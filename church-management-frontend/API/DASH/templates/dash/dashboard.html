@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+{% block title %}
+Dashboard
+{% endblock %}
+{% block content %} 
+         <main>
+                <h1>Dashboard</h1>
+                <div class="date">
+                    <input type="date">
+                </div>
+                <!-- TOTAL MEMBERS CHART STARTS -->
+                <div class="insights">
+                    <div class="members">
+                        <span class="material-symbols-outlined">analytics</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Total Members</h3>
+                                <h1>100</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>81%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 7 days</small>
+                        <!-- TOTAL MEMBERS CHART ENDS -->
+                    </div>
+
+                    <!-- VISITORS CHART STARTS -->
+                <div class="visitors">
+                    <span class="material-symbols-outlined">stacked_line_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Visitors</h3>
+                            <h1>12</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>42%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 7 days</small>
+                </div>
+                <!-- VISITORS CHART ENDS -->
+
+                 <!-- WORK FORCE CHART STARTS -->
+                 <div class="workforce">
+                    <span class="material-symbols-outlined">bar_chart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Work Force</h3>
+                            <h1>45</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>60%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 7 days</small>
+                </div>
+                <!-- WORK FORCE CHART ENDS -->
+                </div>
+
+                <div class="recent-onboard">
+                    <h2>Onboarding History</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>MemberID</th>
+                                <th>Member Name</th>
+                                <th>Dob</th>
+                                <th>Phone Number</th>
+                                <th>Date Joined</th>
+                                <th>Time Joined</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="warning">Pending</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="success">Active</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="success">Active</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                            <tr>
+                                <td>31013376</td>
+                                <td>Fidele Iboh</td>
+                                <td>01/01/01</td>
+                                <td>07546585856</td>
+                                <td>12th AUG 24</td>
+                                <td>23:00 BST</td>
+                                <td class="success">Active</td>
+                                <td class="primary">Details</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="{{url_for('members_bp.admin_view')}}">Show All</a>
+                 </div>
+         </main>
+        <!-- END OF MAIN -->
+    
+    {% endblock %}

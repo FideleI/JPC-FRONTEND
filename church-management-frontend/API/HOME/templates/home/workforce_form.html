@@ -1,0 +1,111 @@
+{% extends "form_layout.html" %}
+{% block title %}
+Member Registration Form
+{% endblock %}
+{% block content %}
+{%block header%} WORKFORCE REGISTRATION FORM {% endblock %}
+        <div class="mb-3">
+            <small><span class="asteric">*</span> Required </small>
+        </div>
+        <div class="header-two mb-3">
+            <h2>PERSONAL INFORMATION</h2>
+        </div>
+        <form action="#" method="POST">
+        
+            <!-- first Name -->
+            <div class="form-group">
+                <label for="first name">First Name <span class="asteric">*</span></label>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter your answer" required>
+            </div>
+            <!-- last Name -->
+            <div class="form-group">
+                <label for="last name">Last Name <span class="asteric">*</span></label>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter your answer" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth <span class="asteric">*</span></label>
+                <input type="text" id="date" name="dob" placeholder="Please input date (dd/mm/yyyy)" required>
+            </div>
+
+            
+            <!-- Phone No -->
+            <div class="form-group">
+                <label for="phone">Phone No <span class="asteric">*</span></label>
+                <input type="text" id="phone" name="phone" placeholder="Number must be 11" pattern="[0-9]{11}" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email <span class="asteric">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Please enter an email" required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address-line1">Address <span class="asteric">*</span></label>
+                <input type="text" id="address-line1" name="address-line1" placeholder="Street Address Line 1" required>
+
+            </div>
+        
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City <span class="asteric">*</span></label>
+                <input type="text" id="city" name="city" placeholder="Enter your answer" required>
+            </div>
+        
+            <!-- Post Code -->
+            <div class="form-group">
+                <label for="postcode">Post Code <span class="asteric">*</span></label>
+                <input type="text" id="postcode" name="postcode" placeholder="Please enter at most 7 characters" maxlength="7" required>
+            </div>
+
+            <!-- Date Joined Church -->
+            <div class="form-group">
+                <label for="date">Date Joined Church <span class="asteric">*</span></label>
+                <input type="text" id="date" name="date_joined" placeholder="Please input date (dd/mm/yyyy)" required>
+            </div>
+        
+            <!-- Work force to Join -->
+            <div class="form-group">
+                <label>Work Force To Join <span class="asteric">*</span></label>
+                <label><input type="radio" name="work-force" value="admin/usher" required> Administration/Ushering</label>
+                <label><input type="radio" name="work-force" value="prayer" required> Prayer Team</label>
+                <label><input type="radio" name="work-force" value="music" required> Muisic/Choir</label>
+                <label><input type="radio" name="work-force" value="instrumentalists" > Instrumentalists</label>
+                <label><input type="radio" name="work-force" value="media" required> Media</label>
+                <label><input type="radio" name="work-force" value="children" required> Children's Team</label>
+                <label><input type="radio" name="media" value="other" required> Other<input type="text" placeholder="Please input name of Workforce" ></label>
+            </div>
+            
+             <!-- Work force training -->
+             <div class="form-group">
+                <label>Have You Attended Workers Training? <span class="asteric">*</span></label>
+                <label><input type="radio" name="workers-training" value="yes" required> Yes</label>
+                <label><input type="radio" name="workers-training" value="no" required> No</label>
+            </div>
+            <!-- year attended -->
+            <div class="form-group">
+                <label for="year-attended">If Yes, Enter The Year Attended</label>
+                <input type="text" id="year-attended" name="year-attended" placeholder="Enter your answer" >
+            </div>
+            <!-- name of parish -->
+            <div class="form-group">
+                <label for="parish-name">Name of Parish</label>
+                <input type="text" id="parish-name" name="parish-name" placeholder="State The Name of The Parish Attended" >
+            </div>
+            
+            <!-- additional comment -->
+            <div class="form-group">
+                <label for="additional-comment">Any Additional Comment</label>
+                <input type="text" id="additional-comment" name="additional-comment" placeholder="Please State Here If You Would Like To Add Any Other Comments" >
+            </div>
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
+    

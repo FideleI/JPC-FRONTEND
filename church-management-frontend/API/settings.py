@@ -1,0 +1,4 @@
+APP_NAME = 'JESUS PAVILION'
+EMAIL = 'lespatar@gmail.com'
+PHONE = '09676767676'
+SERVER_URL = 'http://127.0.0.1:5000'
